@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "BCC Media Downloader",
+  "version": "1.0.0",
+  "description": "Lädt HLS/M3U8-Streams von app.bcc.media mit frei wählbarer Qualität und mehreren Audiospuren herunter.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqMOvmcL68bMsYqPyAA/nSmHE+dBHaDEUelD4XUkriqDaBtZYbw2LGqY05cYgkWQUOThaRY/fttT5Azv/uAq7IKVfEWbUvBDTEsq49M0YskHRqys8OtSsOPDKX1EznYH9SpbpC/ILbBBqkDEY1ZS9VM6CiLmdaBniEgEfd35drWsXCJ5A0R1zFf4rjiJ5U+Z/RP+27kdkosRxYM6/7qYaTA2Y3G1eJ4ZGbytggh2dnjPNR0GHBajYrBYTsfTCQXJPY+5R3fmSBVqcRKRSXeb3radkm/8a2YmQ8A54ESDe96Peh6FyGDYhVroskuoe1dzjq4o882dkX1Wn8jSls26j7QIDAQAB",
+  "permissions": [
+    "downloads",
+    "webRequest",
+    "storage",
+    "nativeMessaging",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://app.bcc.media/*",
+    "https://*.run.app/*",
+    "https://*.bcc.media/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "BCC Media Downloader",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

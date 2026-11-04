@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><img src="icons/logo.svg" alt="BCC Media"><span>Downloader</span></header>
+  <div id="status">Suche Stream…</div>
+  <div id="main" hidden>
+    <label>Dateiname <input id="fname" type="text"></label>
+    <label>Auflösung <select id="video"></select></label>
+    <div class="field"><div class="title">Umfang <small id="len"></small></div>
+      <select id="range"><option value="all">Ganzes Video</option><option value="part">Nur ein Teil</option></select>
+      <div id="partBox" hidden>
+        <div class="times"><label>Start<input id="tStart" type="text" placeholder="0:00" value="0:00"></label>
+        <label>Ende<input id="tEnd" type="text" placeholder="1:23:45"></label></div>
+        <div class="hint">Format h:mm:ss oder m:ss. Geschnitten wird verlustfrei an Segmentgrenzen (ca. ±6 s).</div>
+      </div>
+    </div>
+    <label id="videoToggle" class="check" hidden><input type="checkbox" id="withVideo" checked> Video mit Ton herunterladen</label>
+    <div id="videoPart">
+      <div class="field"><div class="title">Audiospuren</div><div id="audio" class="box"></div></div>
+      <div class="field" id="orderBox" hidden><div class="title">Reihenfolge <small>(oberste = Standardspur)</small></div><ol id="order" class="box"></ol></div>
+    </div>
+    <div class="field" id="subsBox" hidden><div class="title">Untertitel</div><div id="subs" class="box"></div>
+      <select id="subMode">
+        <option value="embed">Als Spur in der MP4 (ein-/ausschaltbar)</option>
+        <option value="srt">Als separate .srt-Datei</option>
+      </select>
+      <label class="check" id="keepSrtLabel"><input type="checkbox" id="keepSrt"> Zusätzlich als .srt-Datei speichern</label></div>
+    <button id="go">Herunterladen</button>
+  </div>
+  <div id="jobs"></div>
+  <script src="popup.js"></script>
+</body></html>

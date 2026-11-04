@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BCC Media Downloader – Anleitung</title>
+<style>
+:root{--bg:#0d1623;--panel:#162234;--line:#26364d;--text:#fff;--muted:#9fb0c6;--accent:#5a9bf0}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:720px;margin:0 auto;padding:32px 20px 60px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:19px;margin:34px 0 10px;color:var(--accent)}
+p{margin:8px 0}.lead{color:var(--muted)}
+ol,ul{padding-left:22px}li{margin:8px 0}
+code{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:.92em}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 18px 10px}
+</style></head><body><main>
+<h1>BCC Media Downloader</h1>
+<p class="lead">Chrome-Erweiterung für app.bcc.media: Auflösung wählen, mehrere Audiospuren (mit Reihenfolge), ganzes Video oder nur ein Ausschnitt. Das Ergebnis erscheint als normale MP4 in den Chrome-Downloads. Es ist keine weitere Software nötig.</p>
+
+<h2>Installation (einmalig, ca. 1 Minute)</h2>
+<div class="box"><ol>
+<li>Zip-Datei entpacken. Der Ordner <code>extension</code> muss danach dauerhaft an einem festen Ort bleiben (nicht löschen oder verschieben).</li>
+<li>In Chrome die Adresse <code>chrome://extensions</code> öffnen und oben rechts den <b>Entwicklermodus</b> einschalten.</li>
+<li><b>Entpackte Erweiterung laden</b> klicken und den Ordner <code>extension</code> auswählen.</li>
+<li>Optional: Über das Puzzle-Symbol in der Chrome-Leiste die Erweiterung anpinnen.</li>
+</ol></div>
+
+<h2>Benutzung</h2>
+<div class="box"><ol>
+<li>Auf app.bcc.media einloggen, ein Video öffnen und kurz abspielen (oder die Seite neu laden und das Video starten).</li>
+<li>Auf das Symbol der Erweiterung klicken.</li>
+<li>Dateiname, Auflösung, Umfang (ganzes Video oder Ausschnitt) und Audiospuren wählen. Gibt es Untertitel, lassen sie sich zusätzlich ankreuzen. Dann kannst du wählen, wie sie gespeichert werden: als Spur in der MP4 (im Player ein- und ausschaltbar) oder als separate <code>.srt</code>-Datei. Wird „Video mit Ton herunterladen“ abgewählt, bekommst du nur die Untertitel als <code>.srt</code>. Bei mehreren Audiospuren die Reihenfolge mit den Pfeilen anpassen. Die oberste ist die Standardspur.</li>
+<li><b>Herunterladen</b> klicken. Das Popup darf danach geschlossen werden.</li>
+<li>Die fertige Datei erscheint oben rechts in den Chrome-Downloads.</li>
+</ol></div>
+
+<h2>Hinweise</h2>
+<ul>
+<li>Gedacht für Videos bis ca. 15–20 Minuten. Die Datei muss komplett in den Browserspeicher passen. Das Popup warnt ab ca. 1,1 GB.</li>
+<li>Mehrere Audiospuren in einer MP4 spielen VLC und IINA ab. QuickTime und Browser spielen meist nur die Standardspur.</li>
+<li>Untertitel gibt es nur bei manchen Videos. Eingebettete Untertitel zeigen VLC, IINA, QuickTime und die meisten Player an. Der Player zeigt oft die erste Untertitelspur automatisch an und lässt sich im Untertitel-Menü umstellen. Eine zusätzliche <code>.srt</code>-Datei heißt wie das Video plus Sprachcode (z. B. <code>.eng.srt</code>).</li>
+<li>Ausschnitte werden verlustfrei an Segmentgrenzen geschnitten (ca. ±6 Sekunden Genauigkeit).</li>
+<li>Wird kein Stream gefunden: Seite neu laden, Video kurz starten und das Popup erneut öffnen.</li>
+<li>Nach einem Update: Zip ersetzen und in <code>chrome://extensions</code> bei der Erweiterung auf „Neu laden“ klicken.</li>
+</ul>
+</main></body></html>
